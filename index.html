@@ -154,6 +154,12 @@
     padding-bottom:12px;border-bottom:1px solid var(--hair);}
   .pf .nm span{font-family:var(--kr);font-weight:200;font-size:12.5px;letter-spacing:.06em;
     color:var(--gray);margin-right:8px;vertical-align:2px;}
+  .pf .sms{display:inline-flex;align-items:center;gap:7px;margin-top:15px;
+    padding:9px 15px;border-radius:999px;background:var(--rose-soft);color:var(--rose-deep);
+    font-family:var(--kr);font-weight:300;font-size:12px;letter-spacing:.02em;
+    text-decoration:none;transition:background .25s,color .25s;}
+  .pf .sms:hover,.pf .sms:focus-visible{background:var(--rose-mid);color:#FFF;}
+  .pf .sms svg{width:13px;height:13px;fill:currentColor;}
   .pf .desc{margin:16px 0 0;font-weight:200;font-size:12.5px;line-height:2.15;color:var(--sub);
     word-break:keep-all;letter-spacing:.01em;}
 
@@ -297,18 +303,15 @@
     color:var(--ink);flex:none;}
   .acc .pr .ac{font-family:var(--kr);font-weight:200;font-size:13.5px;letter-spacing:.01em;
     color:var(--sub);text-align:right;}
-  .acc .btns{display:flex;gap:7px;}
+  .acc .btns{display:flex;}
   .acc .cpbtn{flex:1;display:flex;align-items:center;justify-content:space-between;gap:10px;
-    padding:13px 16px;border:0;border-radius:11px;background:#3B343A;color:#FFF;cursor:pointer;
-    font-family:var(--kr);font-weight:300;font-size:13px;letter-spacing:.01em;
-    transition:background .25s;}
-  .acc .cpbtn:hover,.acc .cpbtn:focus-visible{background:#2C262B;}
+    padding:13px 16px;border:0;border-radius:11px;background:var(--rose-soft);
+    color:#A6567A;cursor:pointer;
+    font-family:var(--kr);font-weight:500;font-size:13px;letter-spacing:.01em;
+    transition:background .25s,color .25s;}
+  .acc .cpbtn:hover,.acc .cpbtn:focus-visible{background:var(--rose-mid);color:#FFF;}
   .acc .cpbtn svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;
     stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-  .acc .msgbtn{flex:none;width:46px;display:grid;place-items:center;border:0;border-radius:11px;
-    background:var(--rose-soft);color:var(--rose-deep);cursor:pointer;transition:background .25s;}
-  .acc .msgbtn:hover,.acc .msgbtn:focus-visible{background:var(--rose-mid);color:#FFF;}
-  .acc .msgbtn svg{width:15px;height:15px;fill:currentColor;}
 
   /* 마무리 */
   .closing{text-align:center;}
@@ -461,6 +464,7 @@
             내 이야기에 귀 기울여주고<br>
             평범한 하루에도 웃음을 더해주는<br>
             오빠와 매일의 기쁨을 나누려 합니다.</p>
+          <a class="sms" href="sms:010-7617-9231" aria-label="장민수에게 문자 보내기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>문자 보내기</a>
         </figcaption>
       </figure>
       <figure class="pf bride">
@@ -471,6 +475,7 @@
             같은 곳을 바라보며 발맞춰 걷고<br>
             가장 든든한 안식처가 되어주는<br>
             혜민이와 평생을 함께하려 합니다.</p>
+          <a class="sms" href="sms:010-5645-8354" aria-label="홍혜민에게 문자 보내기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>문자 보내기</a>
         </figcaption>
       </figure>
     </div>
@@ -660,7 +665,7 @@
             <span class="ac">신한 110-627-419607</span>
           </div>
           <div class="btns">
-            <button class="cpbtn" data-copy="110627419607" data-copy-msg="계좌번호를 복사했습니다" aria-label="장민수 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button><a class="msgbtn" href="sms:010-7617-9231" aria-label="장민수에게 문자"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+            <button class="cpbtn" data-copy="110627419607" data-copy-msg="계좌번호를 복사했습니다" aria-label="장민수 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button>
           </div>
         </div>
         <div class="pr">
@@ -692,7 +697,7 @@
             <span class="ac">하나 430-910490-51707</span>
           </div>
           <div class="btns">
-            <button class="cpbtn" data-copy="43091049051707" data-copy-msg="계좌번호를 복사했습니다" aria-label="홍혜민 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button><a class="msgbtn" href="sms:010-5645-8354" aria-label="홍혜민에게 문자"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+            <button class="cpbtn" data-copy="43091049051707" data-copy-msg="계좌번호를 복사했습니다" aria-label="홍혜민 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button>
           </div>
         </div>
         <div class="pr">
