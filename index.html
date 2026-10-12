@@ -288,22 +288,27 @@
     border-right:1.2px solid #BDB4B8;border-bottom:1.2px solid #BDB4B8;
     transform:rotate(45deg);transition:transform .3s ease;}
   .acc details[open] summary .pl{transform:rotate(-135deg);margin-top:-2px;}
-  .acc .pr{display:flex;align-items:center;gap:14px;padding:18px 22px;
-    border-top:1px solid #F3EEF0;background:#FFF;}
-  .acc .pr .info{flex:1;min-width:0;text-align:left;}
-  .acc .pr .nm{font-family:var(--kr);font-weight:300;font-size:15px;letter-spacing:.01em;color:var(--ink);}
-  .acc .pr .ac{font-family:var(--kr);font-weight:200;font-size:14px;letter-spacing:.01em;
-    color:var(--sub);margin-top:7px;}
-  .acc .act{display:flex;align-items:center;gap:9px;flex:none;}
-  .acc .act a,.acc .act button{width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;
-    display:grid;place-items:center;padding:0;transition:filter .25s;}
-  .acc .act a:hover,.acc .act button:hover{filter:brightness(.95);}
-  .acc .act svg{width:15px;height:15px;}
-  .acc .msg{background:var(--rose-soft);color:var(--rose-deep);}
-  .acc .msg svg{fill:currentColor;}
-  .acc .cp{background:#F2EFF0;color:#857C82;}
-  .acc .cp svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-  .kpay:hover{color:var(--rose-deep);border-color:var(--rose);}
+  .acc .pr-wrap{padding:4px 14px 16px;}
+  .acc .pr{background:#FAF3F6;border-radius:14px;padding:16px 16px 14px;margin:0 0 10px;}
+  .acc .pr:last-child{margin-bottom:0;}
+  .acc .pr .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;
+    margin-bottom:13px;}
+  .acc .pr .nm{font-family:var(--kr);font-weight:300;font-size:15px;letter-spacing:.01em;
+    color:var(--ink);flex:none;}
+  .acc .pr .ac{font-family:var(--kr);font-weight:200;font-size:13.5px;letter-spacing:.01em;
+    color:var(--sub);text-align:right;}
+  .acc .btns{display:flex;gap:7px;}
+  .acc .cpbtn{flex:1;display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding:13px 16px;border:0;border-radius:11px;background:#3B343A;color:#FFF;cursor:pointer;
+    font-family:var(--kr);font-weight:300;font-size:13px;letter-spacing:.01em;
+    transition:background .25s;}
+  .acc .cpbtn:hover,.acc .cpbtn:focus-visible{background:#2C262B;}
+  .acc .cpbtn svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;
+    stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+  .acc .msgbtn{flex:none;width:46px;display:grid;place-items:center;border:0;border-radius:11px;
+    background:var(--rose-soft);color:var(--rose-deep);cursor:pointer;transition:background .25s;}
+  .acc .msgbtn:hover,.acc .msgbtn:focus-visible{background:var(--rose-mid);color:#FFF;}
+  .acc .msgbtn svg{width:15px;height:15px;fill:currentColor;}
 
   /* 마무리 */
   .closing{text-align:center;}
@@ -648,50 +653,66 @@
     <div class="acc">
       <details class="g-groom">
         <summary><span>🤵 신랑측</span><span class="pl"></span></summary>
+        <div class="pr-wrap">
         <div class="pr">
-          <div class="info">
-            <div class="nm">장민수</div>
-            <div class="ac">신한은행 110-627-419607</div>
+          <div class="top">
+            <span class="nm">장민수</span>
+            <span class="ac">신한 110-627-419607</span>
           </div>
-          <div class="act"><a class="msg" href="sms:010-7617-9231" aria-label="장민수에게 문자"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a><button class="cp" data-copy="110627419607" data-copy-msg="계좌번호를 복사했습니다" aria-label="장민수 계좌번호 복사"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button></div>
+          <div class="btns">
+            <button class="cpbtn" data-copy="110627419607" data-copy-msg="계좌번호를 복사했습니다" aria-label="장민수 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button><a class="msgbtn" href="sms:010-7617-9231" aria-label="장민수에게 문자"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+          </div>
         </div>
         <div class="pr">
-          <div class="info">
-            <div class="nm">장문호</div>
-            <div class="ac">신한은행 110-040-629435</div>
+          <div class="top">
+            <span class="nm">장문호</span>
+            <span class="ac">신한 110-040-629435</span>
           </div>
-          <div class="act"><button class="cp" data-copy="110040629435" data-copy-msg="계좌번호를 복사했습니다" aria-label="장문호 계좌번호 복사"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button></div>
+          <div class="btns">
+            <button class="cpbtn" data-copy="110040629435" data-copy-msg="계좌번호를 복사했습니다" aria-label="장문호 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button>
+          </div>
         </div>
         <div class="pr">
-          <div class="info">
-            <div class="nm">김영순</div>
-            <div class="ac">우리은행 307-08-394439</div>
+          <div class="top">
+            <span class="nm">김영순</span>
+            <span class="ac">우리 307-08-394439</span>
           </div>
-          <div class="act"><button class="cp" data-copy="30708394439" data-copy-msg="계좌번호를 복사했습니다" aria-label="김영순 계좌번호 복사"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button></div>
+          <div class="btns">
+            <button class="cpbtn" data-copy="30708394439" data-copy-msg="계좌번호를 복사했습니다" aria-label="김영순 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button>
+          </div>
+        </div>
         </div>
       </details>
       <details class="g-bride">
         <summary><span>👰‍♀️ 신부측</span><span class="pl"></span></summary>
+        <div class="pr-wrap">
         <div class="pr">
-          <div class="info">
-            <div class="nm">홍혜민</div>
-            <div class="ac">하나은행 430-910490-51707</div>
+          <div class="top">
+            <span class="nm">홍혜민</span>
+            <span class="ac">하나 430-910490-51707</span>
           </div>
-          <div class="act"><a class="msg" href="sms:010-5645-8354" aria-label="홍혜민에게 문자"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a><button class="cp" data-copy="43091049051707" data-copy-msg="계좌번호를 복사했습니다" aria-label="홍혜민 계좌번호 복사"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button></div>
+          <div class="btns">
+            <button class="cpbtn" data-copy="43091049051707" data-copy-msg="계좌번호를 복사했습니다" aria-label="홍혜민 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button><a class="msgbtn" href="sms:010-5645-8354" aria-label="홍혜민에게 문자"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+          </div>
         </div>
         <div class="pr">
-          <div class="info">
-            <div class="nm">홍기남</div>
-            <div class="ac">국민은행 666225-96-110789</div>
+          <div class="top">
+            <span class="nm">홍기남</span>
+            <span class="ac">국민 666225-96-110789</span>
           </div>
-          <div class="act"><button class="cp" data-copy="66622596110789" data-copy-msg="계좌번호를 복사했습니다" aria-label="홍기남 계좌번호 복사"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button></div>
+          <div class="btns">
+            <button class="cpbtn" data-copy="66622596110789" data-copy-msg="계좌번호를 복사했습니다" aria-label="홍기남 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button>
+          </div>
         </div>
         <div class="pr">
-          <div class="info">
-            <div class="nm">박숙희</div>
-            <div class="ac">국민은행 914801-01-048572</div>
+          <div class="top">
+            <span class="nm">박숙희</span>
+            <span class="ac">국민 914801-01-048572</span>
           </div>
-          <div class="act"><button class="cp" data-copy="91480101048572" data-copy-msg="계좌번호를 복사했습니다" aria-label="박숙희 계좌번호 복사"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button></div>
+          <div class="btns">
+            <button class="cpbtn" data-copy="91480101048572" data-copy-msg="계좌번호를 복사했습니다" aria-label="박숙희 계좌번호 복사">계좌번호 복사하기<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5 15V5.5A2.5 2.5 0 0 1 7.5 3H17"/></svg></button>
+          </div>
+        </div>
         </div>
       </details>
     </div>
